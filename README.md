@@ -54,7 +54,7 @@ ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数�
 
 例如 `output2.wav` 是 `Audio Seed` 为 2 的音色种子对应的音频，`output111.wav` 是 `Audio Seed` 为 3 的音色种子对应的音频。
 
-[web-ui.mp4](..%2F..%2F..%2FDesktop%2Fweb-ui.mp4)
+https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6be-4c826497fb36
 
 ### 男生
 
