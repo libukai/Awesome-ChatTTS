@@ -54,5 +54,12 @@ def generate_audio(seed=2):
     print(f"\nThe Wav{seed} saved.")
 
 
+def is_repeated_digit_number(n):
+    digits = str(n)
+    return all(d == digits[0] for d in digits)
+
+
 if __name__ == "__main__":
-    generate_audio()
+    for i in range(1, 100000):
+        if is_repeated_digit_number(i):
+            generate_audio(i)
