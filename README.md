@@ -1,132 +1,93 @@
-# ChatTTS
-[**English**](./README.md) | [**中文简体**](./README_CN.md)
+# ChatTTS-Control
 
-ChatTTS is a text-to-speech model designed specifically for dialogue scenario such as LLM assistant. It supports both English and Chinese languages. Our model is trained with 100,000+ hours composed of chinese and english. The open-source version on **[HuggingFace](https://huggingface.co/2Noise/ChatTTS)** is a 40,000 hours pre trained model without SFT.
+Fork from [ChatTTS](https://github.com/2noise/ChatTTS)
 
-For formal inquiries about model and roadmap, please contact us at **open-source@2noise.com**. You could join our QQ group: ~~808364215 (Full)~~ 230696694 (Group 2) for discussion. Adding github issues is always welcomed.
-
----
-## Highlights
-1. **Conversational TTS**: ChatTTS is optimized for dialogue-based tasks, enabling natural and expressive speech synthesis. It supports multiple speakers, facilitating interactive conversations.
-2. **Fine-grained Control**: The model could predict and control fine-grained prosodic features, including laughter, pauses, and interjections. 
-3. **Better Prosody**: ChatTTS surpasses most of open-source TTS models in terms of prosody. We provide pretrained models to support further research and development.
-
-For the detailed description of the model, you can refer to **[video on Bilibili](https://www.bilibili.com/video/BV1zn4y1o7iV)**
+ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数，可以更加方便地控制生成的音频的效果。
 
 ---
 
-## Disclaimer
+## 项目亮点
 
-This repo is for academic purposes only. It is intended for educational and research use, and should not be used for any commercial or legal purposes. The authors do not guarantee the accuracy, completeness, or reliability of the information. The information and data used in this repo, are for academic and research purposes only. The data obtained from publicly available sources, and the authors do not claim any ownership or copyright over the data.
-
-ChatTTS is a powerful text-to-speech system. However, it is very important to utilize this technology responsibly and ethically. To limit the use of ChatTTS, we added a small amount of high-frequency noise during the training of the 40,000-hour model, and compressed the audio quality as much as possible using MP3 format, to prevent malicious actors from potentially using it for criminal purposes. At the same time, we have internally trained a detection model and plan to open-source it in the future.
-
-
----
-## Usage
-
-<h4>Basic usage</h4>
-
-```python
-import ChatTTS
-from IPython.display import Audio
-
-chat = ChatTTS.Chat()
-chat.load_models(compile=False) # Set to True for better performance
-
-texts = ["PUT YOUR TEXT HERE",]
-
-wavs = chat.infer(texts, )
-
-torchaudio.save("output1.wav", torch.from_numpy(wavs[0]), 24000)
-```
-
-<h4>Advanced usage</h4>
-
-```python
-###################################
-# Sample a speaker from Gaussian.
-
-rand_spk = chat.sample_random_speaker()
-
-params_infer_code = {
-  'spk_emb': rand_spk, # add sampled speaker 
-  'temperature': .3, # using custom temperature
-  'top_P': 0.7, # top P decode
-  'top_K': 20, # top K decode
-}
-
-###################################
-# For sentence level manual control.
-
-# use oral_(0-9), laugh_(0-2), break_(0-7) 
-# to generate special token in text to synthesize.
-params_refine_text = {
-  'prompt': '[oral_2][laugh_0][break_6]'
-} 
-
-wav = chat.infer(texts, params_refine_text=params_refine_text, params_infer_code=params_infer_code)
-
-###################################
-# For word level manual control.
-text = 'What is [uv_break]your favorite english food?[laugh][lbreak]'
-wav = chat.infer(text, skip_refine_text=True, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
-torchaudio.save("output2.wav", torch.from_numpy(wavs[0]), 24000)
-```
-
-<details open>
-  <summary><h4>Example: self introduction</h4></summary>
-
-```python
-inputs_en = """
-chat T T S is a text to speech model designed for dialogue applications. 
-[uv_break]it supports mixed language input [uv_break]and offers multi speaker 
-capabilities with precise control over prosodic elements [laugh]like like 
-[uv_break]laughter[laugh], [uv_break]pauses, [uv_break]and intonation. 
-[uv_break]it delivers natural and expressive speech,[uv_break]so please
-[uv_break] use the project responsibly at your own risk.[uv_break]
-""".replace('\n', '') # English is still experimental.
-
-params_refine_text = {
-  'prompt': '[oral_2][laugh_0][break_4]'
-} 
-# audio_array_cn = chat.infer(inputs_cn, params_refine_text=params_refine_text)
-audio_array_en = chat.infer(inputs_en, params_refine_text=params_refine_text)
-torchaudio.save("output3.wav", torch.from_numpy(audio_array_en[0]), 24000)
-```
-[male speaker](https://github.com/2noise/ChatTTS/assets/130631963/e0f51251-db7f-4d39-a0e9-3e095bb65de1)
-
-[female speaker](https://github.com/2noise/ChatTTS/assets/130631963/f5dcdd01-1091-47c5-8241-c4f6aaaa8bbd)
-</details>
+1. 抽离了更多参数，在 web-ui 中可以更加方便的调整参数，便于控制生成音频的效果。
+2. 持续收集和测试不同音色 Seed 的效果，整理成表格方便选用。
+3. 收集和整理了各个细分方向上的 fork 版本，满足更多场景下的使用需求。
 
 ---
-## Roadmap
-- [x] Open-source the 40k hour base model and spk_stats file
-- [ ] Open-source VQ encoder and Lora training code
-- [ ] Streaming audio generation without refining the text*
-- [ ] Open-source the 40k hour version with multi-emotion control
-- [ ] ChatTTS.cpp maybe? (PR or new repo are welcomed.)
- 
-----
-## FAQ
 
-##### How much VRAM do I need? How about infer speed?
-For a 30-second audio clip, at least 4GB of GPU memory is required. For the 4090 GPU, it can generate audio corresponding to approximately 7 semantic tokens per second. The Real-Time Factor (RTF) is around 0.3.
+## 功能优化
 
-##### model stability is not good enough, with issues such as multi speakers or poor audio quality.
-
-This is a problem that typically occurs with autoregressive models(for bark and valle). It's generally difficult to avoid. One can try multiple samples to find a suitable result.
-
-##### Besides laughter, can we control anything else? Can we control other emotions?
-
-In the current released model, the only token-level control units are [laugh], [uv_break], and [lbreak]. In future versions, we may open-source models with additional emotional control capabilities.
+1. 添加了遗漏的需处理的中文标点字符，修复了生成的语音中可能出现的读出控制单元的问题。
+2. 增加了多音字的初步处理，主要是“得”和“地”，使生成的语音听起来更加自然流畅。
+3. 增加了长文本分段功能，分段处理后自动再合并为单个音频文件，避免了过长的文本生成效果失控的问题。
+4. 增加了 script.py 示例脚本，方便通过脚本进行更长文本的处理，建议使用 Pycharm 执行 。
 
 ---
-## Acknowledgements
-- [bark](https://github.com/suno-ai/bark), [XTTSv2](https://github.com/coqui-ai/TTS) and [valle](https://arxiv.org/abs/2301.02111) demostrate a remarkable TTS result by a autoregressive-style system.
-- [fish-speech](https://github.com/fishaudio/fish-speech) reveals capability of GVQ as audio tokenizer for LLM modeling.
-- [vocos](https://github.com/gemelo-ai/vocos) which is used as a pretrained vocoder.
+
+## 参数说明
+
+![配置项说明](web-ui.png)
+
+### 情感控制
+
+* **speed** : 控制音频速度，范围为 0-9，数字越大，速度越快
+* **temperate** : 控制音频情感波动性，范围为 0-1，数字越大，波动性越大
+* **top_P** ：控制音频的情感相关性，范围为 0.1-0.9，数字越大，相关性越高
+* **top_K** ：控制音频的情感相似性，范围为 1-20，数字越小，相似性越高
+
+### 文本控制
+
+* **Refine text** : 控制是否对文本进行口语化处理，取消勾选则后面三个选项无效
+* **oral** : 控制文本口语化程度，范围为 0-9，数字越大，添加的“就是”、“那么”之类的连接词越多
+* **laugh** : 控制文本是否添加笑声，范围为 0-9，数字越大，笑声越多
+* **break** : 控制文本是否添加停顿，范围为 0-9，数字越大，停顿越多
+
+### 种子控制
+
+* **Audio Seed** : 配置音色种子值，不同种子对应不同音色，不同种子间差异性较大
+* **Text Seed** : 配置情感种子值，不同种子对应不同情感，不同种子间差异性较小
 
 ---
-## Special Appreciation
-- [wlu-audio lab](https://audio.westlake.edu.cn/) for early algorithm experiments.
+
+## 音色种子
+
+在 [samples](https://github.com/libukai/ChatTTS-Control/tree/main/samples) 目录下提供了一些音色种子的示例，可以通过这些示例来选择合适的音色种子。
+
+例如 `output2.wav` 是 `Audio Seed` 为 2 的音色种子对应的音频，`output111.wav` 是 `Audio Seed` 为 3 的音色种子对应的音频。
+
+[web-ui.mp4](..%2F..%2F..%2FDesktop%2Fweb-ui.mp4)
+
+### 男生
+
+| Seed | 类型 | 年龄 | 风格   |
+|:----:|:--:|:--:|------|
+| 111  | 男声 | 青年 | 文艺范  |
+| 333  | 男声 | 青年 | 食草系  |
+| 666  | 男声 | 中年 | 白领   |
+| 7777 | 男声 | 中年 | 港系配音 |
+| 9999 | 男声 | 中年 | 低沉深邃 |
+
+### 女生
+
+| Seed | 类型 | 年龄 | 风格   |
+|:----:|:--:|:--:|------|
+|  2   | 女声 | 青年 | 情感丰富 |
+|  4   | 女声 | 中年 | 感情深邃 |
+| 1111 | 女声 | 中年 | 清澈干净 |
+| 3333 | 女声 | 中年 | 淡然平静 |
+
+---
+
+## 计划路线
+
+- [x] 跟随原版仓库更新
+- [ ] 持续更新音色种子表和相关推荐
+- [ ] 生成开箱可用的 Docker 镜像
+
+---
+
+## 相关推荐
+
+- [ChatTTS](https://github.com/2noise/ChatTTS)：原版 ChatTTS 项目，有关部署和执行问题在 [Issues](https://github.com/2noise/ChatTTS/issues) 中有详细讨论
+- [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)：提供了打包了运行环境的 Pypi 包，方便小白一键体验体验项目效果
+- [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui): 提供了Docker 版本，提供 UI 界面和 API 接口，更方便小白日常使用
+- [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)：提供了完善的 ChatTTS 封装，包括 API WebUI Playground 等，适合技术大佬深入开发
