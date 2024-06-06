@@ -3,6 +3,7 @@ import numpy as np
 import torch
 import ChatTTS
 import torchaudio
+import modelscope
 
 # 下载离线模型并加载
 
