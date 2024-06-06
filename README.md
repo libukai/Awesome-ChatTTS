@@ -4,6 +4,18 @@ Fork from [ChatTTS](https://github.com/2noise/ChatTTS)
 
 ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数，可以更灵活地控制音频生成的效果。
 
+此外，还整理和汇总了 ChatTTS 相关的常见问题和扩展资源，争取成为 ChatTTS 项目的最佳参考。如果您觉得有用，还请打赏个 Star 支持一下。
+
+* [项目亮点](#项目亮点)
+* [功能优化](#功能优化)
+* [参数说明](#参数说明)
+* [音色种子](#音色种子)
+* [音频示例](#音频示例)
+* [安装指南](#安装指南)
+* [常见问题](#常见问题)
+* [相关推荐](#相关推荐)
+* [计划路线](#计划路线)
+
 ---
 
 ## 项目亮点
@@ -83,6 +95,34 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/ad133c85-e1f3-44aa-9ed
 ### 打开 Refine Text，进行口语化处理
 
 https://github.com/libukai/ChatTTS-Control/assets/5654585/855b30bf-6bcc-4d57-9a14-8e205dc62c54
+
+## 安装指南
+
+1. 根据设备类型，下载 [Miniconda](https://docs.anaconda.com/free/miniconda/) 并安装
+2. 打开终端，下载项目代码
+``` bash
+https://github.com/libukai/ChatTTS-Control.git
+```
+3. 进入项目目录，安装基本依赖
+``` bash
+cd ChatTTS-Control
+pip install -r requirements.txt
+```
+4. 安装中文依赖
+``` bash
+conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
+```
+5. 运行 web-ui
+``` bash
+python webui.py
+
+# 首次运行会下载模型，如果可以科学上网请耐心等待下载完成后。
+# 如果无法下载，可以参考 **模型下载** 问题中的解决方案。 
+# 显示以下信息，则表示运行成功：
+
+Running on local URL:  http://0.0.0.0:8080
+```
+6. 打开浏览器访问 http://localhost:8080
 
 ## 常见问题
 
