@@ -20,7 +20,7 @@ ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数�
 1. 添加了遗漏的需处理的中文标点字符，修复了生成的语音中可能出现的读出控制单元的问题。
 2. 增加了多音字的初步处理，主要是“得”和“地”，使生成的语音听起来更加自然流畅。
 3. 增加了长文本分段功能，分段处理后自动再合并为单个音频文件，避免了过长的文本生成效果失控的问题。
-4. 增加了 script.py 示例脚本，包含了常见问题和报错中的解决方案说明 。
+4. 增加了 script.py 示例脚本，包含了常见问题中解决方案的说明 。
 
 ---
 
@@ -55,8 +55,6 @@ ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数�
 
 例如 `output2.wav` 是 `Audio Seed` 为 2 的音色种子对应的音频，`output111.wav` 是 `Audio Seed` 为 3 的音色种子对应的音频。
 
-https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6be-4c826497fb36
-
 ### 男生
 
 | Seed | 类型 | 年龄 | 风格   |
@@ -75,6 +73,16 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6b
 |  4   | 女声 | 中年 | 感情深邃 |
 | 1111 | 女声 | 中年 | 清澈干净 |
 | 3333 | 女声 | 中年 | 淡然平静 |
+
+## 音频示例
+
+### 关闭 Refine Text，不进行口语化处理
+
+https://github.com/libukai/ChatTTS-Control/assets/5654585/ad133c85-e1f3-44aa-9ed4-6b0374345518
+
+### 打开 Refine Text，进行口语化处理
+
+https://github.com/libukai/ChatTTS-Control/assets/5654585/855b30bf-6bcc-4d57-9a14-8e205dc62c54
 
 ## 常见问题
 
