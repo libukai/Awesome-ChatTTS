@@ -75,6 +75,16 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6b
 | 1111 | 女声 | 中年 | 清澈干净 |
 | 3333 | 女声 | 中年 | 淡然平静 |
 
+## 相关推荐
+|                            项目                             | Star  | 亮点                          |
+|:---------------------------------------------------------:|:-----:|-----------------------------|
+|       [ChatTTS](https://github.com/2noise/ChatTTS)        | 20.6K | 源仓库，问题较多，issue 中问题讨论热烈      |
+| [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)  | 3.1k  | 提供 Docker 镜像和 API，方便与其他项目集成 |
+| [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab) |  444  | Google Colab 一键部署，还有音色抽卡功能  |
+|   [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)   |  195  | Pypi 包一键安装，便于小白体验项目效果       |
+| [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge) |  65   | 提供了完善的 ChatTTS 封装，适合技术流深入研究 | 
+| [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control) |  10   | 提供更多控制参数和详细解读，汇总相关资源推荐      |
+
 ---
 
 ## 计划路线
@@ -84,10 +94,3 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6b
 - [ ] 生成开箱可用的 Docker 镜像
 
 ---
-
-## 相关推荐
-
-- [ChatTTS](https://github.com/2noise/ChatTTS)：原版 ChatTTS 项目，有关部署和执行问题在 [Issues](https://github.com/2noise/ChatTTS/issues) 中有详细讨论
-- [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)：提供了打包了运行环境的 Pypi 包，方便小白一键体验体验项目效果
-- [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui): 提供了Docker 版本，提供 UI 界面和 API 接口，更方便小白日常使用
-- [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)：提供了完善的 ChatTTS 封装，包括 API WebUI Playground 等，适合技术大佬深入开发
