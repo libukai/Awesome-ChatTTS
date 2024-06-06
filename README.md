@@ -126,7 +126,7 @@ Running on local URL:  http://0.0.0.0:8080
 
 ## 常见问题
 
-### 依赖版本
+### 依赖版本过低
 
 原版项目中 `requirement.txt` 中列出的依赖版本较老，在部分环境下可能会出现报错，可以根据报错信息安装更高版本。
 
@@ -148,7 +148,7 @@ numpy~=1.26.4
 modelscope==1.15.0
 ```
 
-### 模型下载
+### 模型无法下载
 
 原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，请从 [modelscope](https://www.modelscope.cn/models/pzc163/chatTTS/summary) 或者 [hf-mirror](https://hf-mirror.com/2Noise/ChatTTS) 上下载模型，并配置本地路径。
 
@@ -172,7 +172,7 @@ chat.load_models(source='local', local_path=model_dir)
 ```
 ![modelscope.png](readme/modelscope.png)
 
-### 音频保存
+### 音频无法保存
 
 通过脚本运行时，音频保存官方推荐使用 torchaudio，实测最新版本已经可以正常运行。如果运行有问题，也可以使用 soundfile 库进行音频保存。
 
@@ -194,7 +194,14 @@ wavs = chat.infer(text, skip_refine_text=True, params_refine_text=params_refine_
 soundfile.write("output1.wav", wavs[0][0], 24000)
 ```
 
-### 运行报错
+### 语气标签被读出
+
+出现这个问题是因为官方代码处理中文标点符号时覆盖不全，例如 `？`、`…` 等符号没有被处理，导致模型生成时出错。
+
+可以手动删除类似的中文标点符号，或者改用本 Fork 项目，代码增加了更多的中文标点符号处理逻辑。
+
+
+### 运行代码报错
 
 官方示例以 IPython 为基础，导致在终端和其他 IDE 运行时缺少了很多依赖，可以根据报错进行安装。
 
