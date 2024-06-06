@@ -2,15 +2,15 @@
 
 Fork from [ChatTTS](https://github.com/2noise/ChatTTS)
 
-ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数，可以更加方便地控制生成的音频的效果。
+ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数，可以更灵活地控制音频生成的效果。
 
 ---
 
 ## 项目亮点
 
-1. 抽离了更多参数，在 web-ui 中可以更加方便的调整参数，便于控制生成音频的效果。
-2. 持续收集和测试不同音色 Seed 的效果，整理成表格方便选用。
-3. 收集和整理了各个细分方向上的 fork 版本，满足更多场景下的使用需求。
+1. 抽离了更多参数，在 web-ui 中可以更加方便的调整参数。
+2. 持续收集和测试不同音色 Seed ，整理成表格方便选用。
+3. 持续整理了各个细分方向上的 fork 资源，满足更多场景下的使用需求。
 
 ---
 
@@ -82,7 +82,8 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6b
 | [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)  | 3.1k  | 提供 Docker 镜像和 API，方便与其他项目集成 |
 | [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab) |  444  | Google Colab 一键部署，还有音色抽卡功能  |
 |   [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)   |  195  | Pypi 包一键安装，便于小白体验项目效果       |
-| [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge) |  65   | 提供了完善的 ChatTTS 封装，适合技术流深入研究 | 
+| [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge) |  65   | 提供了完善的 ChatTTS 封装，适合技术流深入研究 |
+| [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS) | 38 | ComfyUi 版本，可作为工作流节点引入       |
 | [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control) |  10   | 提供更多控制参数和详细解读，汇总相关资源推荐      |
 
 ---
