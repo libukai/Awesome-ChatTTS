@@ -136,6 +136,7 @@ halfwidth_2_fullwidth_map = {
 
 polyphony_map = {
     '得': '的',
+    '地': '的',
 }
 
 
