@@ -97,6 +97,7 @@ character_map = {
     '-': ',',
     '…': '',
     '—': ',',
+    '＿': ',',
 }
 
 halfwidth_2_fullwidth_map = {
