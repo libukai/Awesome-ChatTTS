@@ -86,6 +86,28 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/855b30bf-6bcc-4d57-9a1
 
 ## 常见问题
 
+### 依赖版本
+
+原版项目中 `requirement.txt` 中列出的依赖版本较老，在部分环境下可能会出现报错，可以根据报错信息安装更高版本。
+
+本项目建议使用 Python 3.10，`torch` 及相关依赖升级至 2.3.0。
+
+```conf
+omegaconf~=2.3.0
+torch~=2.3.0
+torchaudio==2.3.0
+tqdm~=4.66.4
+einops~=0.8.0
+vector-quantize-pytorch~=1.14.24
+transformers~=4.41.1
+vocos~=0.1.0
+ipython==8.25.0
+huggingface-hub~=0.23.2
+gradio~=4.32.2
+numpy~=1.26.4
+modelscope==1.15.0
+```
+
 ### 模型下载
 
 原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，请从 [modelscope](https://www.modelscope.cn/models/pzc163/chatTTS/summary) 或者 [hf-mirror](https://hf-mirror.com/2Noise/ChatTTS) 上下载模型，并配置本地路径。
@@ -156,6 +178,10 @@ conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
 4、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
 
 详见 **音频保存** 问题
+
+5、`Could not find a version that satisfies the requirement torch~=2.1.0`
+
+详见 **依赖版本** 问题
 
 ## 相关推荐
 |                            项目                             |                                                                                           Star                                                                                           | 亮点                          |
