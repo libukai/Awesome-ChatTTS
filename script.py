@@ -2,10 +2,14 @@ import random
 import numpy as np
 import torch
 import ChatTTS
-import soundfile
+import torchaudio
+
+# 离线模型下载
+from modelscope import snapshot_download
+model_dir = snapshot_download('pzc163/chatTTS')
 
 chat = ChatTTS.Chat()
-chat.load_models(compile=True)  # Set to True for better performance
+chat.load_models(source='local', local_path=model_dir, compile=True)
 
 
 def deterministic(seed):
@@ -49,9 +53,9 @@ def generate_audio(seed=2):
     params_infer_code, params_refine_text = deterministic(seed)
     print(f"\nThe Seed is {seed}\n")
     text = '曾经有一份真挚的爱情摆在我的面前，但是我没有珍惜，等我失去后才后悔莫及，尘世间最痛苦的事情莫过于此。'
-    wav = chat.infer(text, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
-    soundfile.write(f"output{seed}.wav", wav[0][0], 24000)
-    print(f"\nThe Wav{seed} saved.")
+    wavs = chat.infer(text, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
+    torchaudio.save("output1.wav", torch.from_numpy(wavs[0]), 24000)
+    print(f"\nThe Seed_{seed} saved.")
 
 
 def is_repeated_digit_number(n):

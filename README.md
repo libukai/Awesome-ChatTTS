@@ -8,9 +8,10 @@ ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数�
 
 ## 项目亮点
 
-1. 抽离了更多参数，在 web-ui 中可以更加方便的调整参数。
-2. 持续收集和测试不同音色 Seed ，整理成表格方便选用。
-3. 持续整理了各个细分方向上的 fork 资源，满足更多场景下的使用需求。
+1. 抽离了更多参数，在 web-ui 中可以更加方便地进行调整。
+2. 收集和测试不同音色 Seed ，整理成表格方便选用。
+3. 整理了各个细分方向上的 fork 资源，满足更多场景下的使用需求。
+4. 整理了常见报错的解决方案，方便快速定位和解决问题。
 
 ---
 
@@ -19,13 +20,13 @@ ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数�
 1. 添加了遗漏的需处理的中文标点字符，修复了生成的语音中可能出现的读出控制单元的问题。
 2. 增加了多音字的初步处理，主要是“得”和“地”，使生成的语音听起来更加自然流畅。
 3. 增加了长文本分段功能，分段处理后自动再合并为单个音频文件，避免了过长的文本生成效果失控的问题。
-4. 增加了 script.py 示例脚本，方便通过脚本进行更长文本的处理，建议使用 Pycharm 执行 。
+4. 增加了 script.py 示例脚本，包含了常见问题和报错中的解决方案说明 。
 
 ---
 
 ## 参数说明
 
-![配置项说明](web-ui.png)
+![配置项说明](readme/web-ui.png)
 
 ### 情感控制
 
@@ -74,6 +75,79 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/b88afdb7-953a-4bf6-b6b
 |  4   | 女声 | 中年 | 感情深邃 |
 | 1111 | 女声 | 中年 | 清澈干净 |
 | 3333 | 女声 | 中年 | 淡然平静 |
+
+## 常见问题
+
+### 模型下载
+
+原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，请从 [modelscope](https://www.modelscope.cn/models/pzc163/chatTTS/summary) 或者 [hf-mirror](https://hf-mirror.com/2Noise/ChatTTS) 上下载模型，并配置本地路径。
+
+1. 在终端中安装 modelscope 依赖
+
+``` bash
+pip install modelscope
+```
+
+2. 修改 webui.py 中的代码
+
+``` python
+# 第 10 行添加导入依赖
+from modelscope import snapshot_download
+
+# 第 102 行添加模型下载代码
+model_dir = snapshot_download('pzc163/chatTTS')
+
+# 第 104 行修改模型路径
+chat.load_models(source='local', local_path=model_dir)
+```
+![modelscope.png](readme/modelscope.png)
+
+### 音频保存
+
+通过脚本运行时，音频保存官方推荐使用 torchaudio，实测最新版本已经可以正常运行。如果运行有问题，也可以使用 soundfile 库进行音频保存。
+
+ 1. 官方示例中 torchaudio 代码有误，需要进行修正：
+
+``` python
+import torchaudio
+#  需要将 chat.infer 生成的文件对象修正为 wavs
+wavs = chat.infer(text, skip_refine_text=True, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
+torchaudio.save("output2.wav", torch.from_numpy(wavs[0]), 24000)
+```
+
+2. 也可以使用 soundfile 库进行音频保存：
+
+``` python
+import soundfile
+
+wavs = chat.infer(text, skip_refine_text=True, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
+soundfile.write("output1.wav", wavs[0][0], 24000)
+```
+
+### 运行报错
+
+官方示例以 IPython 为基础，导致在终端和其他 IDE 运行时缺少了很多依赖，可以根据报错进行安装。
+
+1、`load_models() got an unexpected keyword argument 'source'`
+
+详见 **模型下载** 问题
+
+2、`cannot import name 'CommitOperationAdd' from 'huggingface_hub'`
+   
+详见 **模型下载** 问题
+
+3、`local variable 'Normalizer' referenced before assignment`
+
+需要安装 [conda](https://docs.anaconda.com/free/miniconda/) 环境后，再安装 `pynini` 和 `nemo_text_processing` 依赖
+
+``` bash
+
+conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
+```
+
+4、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
+
+详见 **音频保存** 问题
 
 ## 相关推荐
 |                            项目                             |                                                                                           Star                                                                                           | 亮点                          |
