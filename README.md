@@ -99,7 +99,7 @@ https://github.com/libukai/ChatTTS-Control/assets/5654585/855b30bf-6bcc-4d57-9a1
 ## 安装指南
 
 1. 根据设备类型，下载 [Miniconda](https://docs.anaconda.com/free/miniconda/) 并安装
-2. 打开终端，下载项目代码
+2. 在终端中下载项目代码
 ``` bash
 https://github.com/libukai/ChatTTS-Control.git
 ```
@@ -112,12 +112,16 @@ pip install -r requirements.txt
 ``` bash
 conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
 ```
+5. 出现如下报错，Windows 设备需要按 [教程](https://www.cnblogs.com/ajianbeyourself/p/17654155.html) 配置环境路径
+```bash
+ModuleNotFoundError : No module named'Cython'
+```
 5. 运行 web-ui
 ``` bash
 python webui.py
 
-# 首次运行会下载模型，如果可以科学上网请耐心等待下载完成后。
-# 如果无法下载，可以参考 **模型下载** 问题中的解决方案。 
+# 首次运行会下载模型，如果可以科学上网请耐心等待下载完成
+# 如果无法下载，可以参考 **模型下载** 问题中的解决方案修改代码
 # 显示以下信息，则表示运行成功：
 
 Running on local URL:  http://0.0.0.0:8080
@@ -207,11 +211,11 @@ soundfile.write("output1.wav", wavs[0][0], 24000)
 
 1、`load_models() got an unexpected keyword argument 'source'`
 
-详见 **模型下载** 问题
+详见 **模型下载**
 
 2、`cannot import name 'CommitOperationAdd' from 'huggingface_hub'`
    
-详见 **模型下载** 问题
+详见 **模型下载**
 
 3、`local variable 'Normalizer' referenced before assignment`
 
@@ -224,22 +228,27 @@ conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
 
 4、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
 
-详见 **音频保存** 问题
+详见 **音频保存**
 
 5、`Could not find a version that satisfies the requirement torch~=2.1.0`
 
-详见 **依赖版本** 问题
+详见 **依赖版本**
+
+6、`ModuleNotFoundError : No module named'Cython'`
+
+详见 **安装指南**
 
 ## 相关推荐
-|                            项目                             |                                                                                           Star                                                                                           | 亮点                          |
-|:---------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-----------------------------|
-|       [ChatTTS](https://github.com/2noise/ChatTTS)        | ![Star](https://img.shields.io/github/stars/2noise/ChatTTS) | 源仓库，问题较多，issue 中问题讨论热烈      |
-| [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)  | ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)  | 提供 Docker 镜像和 API，方便与其他项目集成 |
-| [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab) | ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)  | Google Colab 一键部署，还有音色抽卡功能  |
-|   [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)   | ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)  | Pypi 包一键安装，便于小白体验项目效果       |
-| [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge) | ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)  | 提供了完善的 ChatTTS 封装，适合技术流深入研究 |
-| [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS) |  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)  | ComfyUi 版本，可作为工作流节点引入       |
-| [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control) |  ![Star](https://img.shields.io/github/stars/libukai/ChatTTS-Control)  | 提供更多控制参数和详细解读，汇总相关资源推荐      |
+|                            项目                             |                                                                                           Star                                                                                           | 亮点                               |
+|:---------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|----------------------------------|
+|       [ChatTTS](https://github.com/2noise/ChatTTS)        | ![Star](https://img.shields.io/github/stars/2noise/ChatTTS) | 源仓库，问题较多，issue 中问题讨论热烈           |
+| [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)  | ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)  | 提供 Docker 镜像和 API，方便与其他项目集成      |
+| [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab) | ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)  | Google Colab 一键部署，还有音色抽卡功能       |
+|   [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)   | ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)  | Pypi 包一键安装，便于小白体验项目效果            |
+| [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge) | ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)  | 提供了完善的 ChatTTS 封装，适合技术流深入研究      |
+| [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS) |  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)  | ComfyUi 版本，可作为工作流节点引入            |
+| [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control) |  ![Star](https://img.shields.io/github/stars/libukai/ChatTTS-Control)  | 提供更多控制参数和详细解读，汇总相关资源推荐           |
+| [ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) | ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)  | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 
 ---
 
