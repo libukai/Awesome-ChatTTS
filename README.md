@@ -1,40 +1,43 @@
-# ChatTTS-Control
+# Awesome-ChatTTS
 
-Fork from [ChatTTS](https://github.com/2noise/ChatTTS)
+Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源，是 ChatTTS 的最佳入门参考。
 
-ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数，可以更灵活地控制音频生成的效果。
+如果您觉得有用，还请打赏个 Star 支持一下。
 
-此外，还整理和汇总了 ChatTTS 相关的常见问题和扩展资源，争取成为 ChatTTS 项目的最佳参考。如果您觉得有用，还请打赏个 Star 支持一下。
-
-* [项目亮点](#项目亮点)
-* [功能优化](#功能优化)
+* [快速体验](#快速体验)
+* [热门分支](#热门分支)
 * [参数说明](#参数说明)
 * [音色种子](#音色种子)
-* [音频示例](#音频示例)
 * [安装指南](#安装指南)
 * [常见问题](#常见问题)
-* [相关推荐](#相关推荐)
-* [计划路线](#计划路线)
+* [报错速查](#报错速查)
+
+## 快速体验
+
+|                                                    网址                                                     | 亮点                       |
+|:---------------------------------------------------------------------------------------------------------:|--------------------------|
+|                                     [Web](https://chattts.com/#Demo)                                      | 官方网站，提供原版网页版体验           |
+| [Colab](https://colab.research.google.com/github/6drf21e/ChatTTS_colab/blob/main/chattts_webui_mix.ipynb) | Colab 一键部署，需要有 Google 账号 |
+|                    [Win/Mac](https://pan.baidu.com/s/1t3XddrF8KBJ2dYqmwvqOQw?pwd=nmhx)                    | Win/Mac 安装包，界面美观还能降噪     |
+|                              [Linux](https://pypi.org/project/chattts-fork/)                              | Python 整合包，使用命令行安装和使用    |
+
+
+## 热门分支
+
+|                                      项目                                      |                                     Star                                      | 亮点                               |
+|:----------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|----------------------------------|
+|                 [ChatTTS](https://github.com/2noise/ChatTTS)                 |          ![Star](https://img.shields.io/github/stars/2noise/ChatTTS)          | 源仓库，问题较多，请参见下方解决方案               |
+|           [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)           |     ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)      | 提供 Docker 镜像和 API，方便与其他项目集成      |
+|          [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)           |      ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)       | Google Colab 一键部署，还有音色抽卡功能       |
+|            [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)             |        ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)        | Pypi 包一键安装，便于小白体验项目效果            |
+|           [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            |       ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)        | 提供了 ChatTTS 封装，适合技术流深入研究         |
+|         [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |      ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)       | ComfyUi 版本，可作为工作流节点引入            |
+|               [ChatTTS](https://github.com/Kedreamix/ChatTTS)                |        ![Star](https://img.shields.io/github/stars/Kedreamix/ChatTTS)         | 技术向的源代码解读，可以帮助更好的理解技术原理          |
+| [ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) | ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker) | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 
 ---
 
-## 项目亮点
 
-1. 抽离了更多参数，在 web-ui 中可以更加方便地进行调整。
-2. 收集和测试不同音色 Seed ，整理成表格方便选用。
-3. 整理了各个细分方向上的 fork 资源，满足更多场景下的使用需求。
-4. 整理了常见报错的解决方案，方便快速定位和解决问题。
-
----
-
-## 功能优化
-
-1. 添加了遗漏的需处理的中文标点字符，修复了生成的语音中可能出现的读出控制单元的问题。
-2. 增加了多音字的初步处理，主要是“得”和“地”，使生成的语音听起来更加自然流畅。
-3. 增加了长文本分段功能，分段处理后自动再合并为单个音频文件，避免了过长的文本生成效果失控的问题。
-4. 增加了 script.py 示例脚本，包含了常见问题中解决方案的说明 。
-
----
 
 ## 参数说明
 
@@ -86,17 +89,9 @@ ChatTTS-Control 在原版 web-ui 的基础上，增加了更多的控制参数�
 | 1111 | 女声 | 中年 | 清澈干净 |
 | 3333 | 女声 | 中年 | 淡然平静 |
 
-## 音频示例
-
-### 关闭 Refine Text，不进行口语化处理
-
-https://github.com/libukai/ChatTTS-Control/assets/5654585/ad133c85-e1f3-44aa-9ed4-6b0374345518
-
-### 打开 Refine Text，进行口语化处理
-
-https://github.com/libukai/ChatTTS-Control/assets/5654585/855b30bf-6bcc-4d57-9a14-8e205dc62c54
-
 ## 安装指南
+
+本安装指南适用于需要运行源仓库代码的用户，小白用户建议使用 [快速体验](#快速体验) 中的方法。
 
 1. 根据设备类型，下载 [Miniconda](https://docs.anaconda.com/free/miniconda/) 并安装
 2. 在终端中下载项目代码
@@ -129,6 +124,8 @@ Running on local URL:  http://0.0.0.0:8080
 6. 打开浏览器访问 http://localhost:8080
 
 ## 常见问题
+
+源仓库代码中的问题较多，可以根据以下清单快速解决。
 
 ### 依赖版本过低
 
@@ -202,64 +199,60 @@ soundfile.write("output1.wav", wavs[0][0], 24000)
 
 出现这个问题是因为官方代码处理中文标点符号时覆盖不全，例如 `？`、`…` 等符号没有被处理，导致模型生成时出错。
 
-可以手动删除类似的中文标点符号，或者改用本 Fork 项目，代码增加了更多的中文标点符号处理逻辑。
+可以手动删除类似的中文标点符号，或者修改 `ChatTTS/utils/infer_utils.py` 中的代码，在 103 行的 `character_map` 的字典中添加缺失的标点符号。
 
+```Python
+character_map = {
+    '…': '',
+    '—': ',',
+    '＿': ',',
+    '？': ',',
+    }
+```
 
-### 运行代码报错
+## 报错速查
 
 官方示例以 IPython 为基础，导致在终端和其他 IDE 运行时缺少了很多依赖，可以根据报错进行安装。
 
 1、`load_models() got an unexpected keyword argument 'source'`
 
-详见 **模型下载**
+详见 **常见问题 - 模型下载**
 
 2、`cannot import name 'CommitOperationAdd' from 'huggingface_hub'`
    
-详见 **模型下载**
+详见 **常见问题 - 模型下载**
 
 3、`local variable 'Normalizer' referenced before assignment`
 
-需要安装 [conda](https://docs.anaconda.com/free/miniconda/) 环境后，再安装 `pynini` 和 `nemo_text_processing` 依赖
+需要根据 **安装指南** 完成环境配置后，再安装 `pynini` 和 `nemo_text_processing` 依赖
 
 ``` bash
-
 conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
 ```
 
 4、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
 
-详见 **音频保存**
+详见 **常见问题 - 音频保存**
 
 5、`Could not find a version that satisfies the requirement torch~=2.1.0`
 
-详见 **依赖版本**
+详见 **常见问题 - 依赖版本**
 
 6、`ModuleNotFoundError : No module named'Cython'`
 
 详见 **安装指南**
 
-## 相关推荐
-|                                      项目                                      |                                                                                           Star                                                                                           | 亮点                             |
-|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|--------------------------------|
-|                 [ChatTTS](https://github.com/2noise/ChatTTS)                 | ![Star](https://img.shields.io/github/stars/2noise/ChatTTS) | 源仓库，问题较多，issue 中问题讨论热烈         |
-|           [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)           | ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)  | 提供 Docker 镜像和 API，方便与其他项目集成    |
-|          [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)           | ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)  | Google Colab 一键部署，还有音色抽卡功能     |
-|            [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)             | ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)  | Pypi 包一键安装，便于小白体验项目效果          |
-|           [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            | ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)  | 提供了完善的 ChatTTS 封装，适合技术流深入研究    |
-|        [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control)         |  ![Star](https://img.shields.io/github/stars/libukai/ChatTTS-Control)  | 提供更多控制参数和详细解读，汇总相关资源推荐         |
-|         [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)  | ComfyUi 版本，可作为工作流节点引入          |
-|  [ChatTTS](https://github.com/Kedreamix/ChatTTS)  | ![Star](https://img.shields.io/github/stars/Kedreamix/ChatTTS)  | 技术向的源代码解读，可以帮助更好的理解技术原理        |
-| [ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) | ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)  | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
-
 ---
 
-## 计划路线
+## 代码说明
 
-- [x] 跟随原版仓库更新
-- [ ] 持续更新音色种子表和相关推荐
-- [ ] 生成开箱可用的 Docker 镜像
+本项目代码在原版项目代码的基础上进行了一些优化和整理，主要包括以下几个方面：
 
----
+1. 抽离了更多参数，优化版 web-ui 中可以更加方便地进行调整。
+2. 添加了遗漏的需处理的中文标点字符，修复了生成的语音中可能出现的读出控制单元的问题。
+3. 增加了多音字的初步处理，主要是“得”和“地”，使生成的语音听起来更加自然流畅。
+4增加了长文本分段功能，分段处理后自动再合并为单个音频文件，避免了过长的文本生成效果失控的问题。
+5. 增加了 script.py 示例脚本，包含了常见问题中解决方案的说明 。
 
 ## 项目趋势
 
