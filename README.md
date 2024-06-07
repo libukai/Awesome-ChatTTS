@@ -239,15 +239,16 @@ conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
 详见 **安装指南**
 
 ## 相关推荐
-|                            项目                             |                                                                                           Star                                                                                           | 亮点                               |
-|:---------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|----------------------------------|
-|       [ChatTTS](https://github.com/2noise/ChatTTS)        | ![Star](https://img.shields.io/github/stars/2noise/ChatTTS) | 源仓库，问题较多，issue 中问题讨论热烈           |
-| [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)  | ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)  | 提供 Docker 镜像和 API，方便与其他项目集成      |
-| [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab) | ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)  | Google Colab 一键部署，还有音色抽卡功能       |
-|   [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)   | ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)  | Pypi 包一键安装，便于小白体验项目效果            |
-| [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge) | ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)  | 提供了完善的 ChatTTS 封装，适合技术流深入研究      |
-| [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS) |  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)  | ComfyUi 版本，可作为工作流节点引入            |
-| [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control) |  ![Star](https://img.shields.io/github/stars/libukai/ChatTTS-Control)  | 提供更多控制参数和详细解读，汇总相关资源推荐           |
+|                                      项目                                      |                                                                                           Star                                                                                           | 亮点                             |
+|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|--------------------------------|
+|                 [ChatTTS](https://github.com/2noise/ChatTTS)                 | ![Star](https://img.shields.io/github/stars/2noise/ChatTTS) | 源仓库，问题较多，issue 中问题讨论热烈         |
+|           [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)           | ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)  | 提供 Docker 镜像和 API，方便与其他项目集成    |
+|          [ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)           | ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)  | Google Colab 一键部署，还有音色抽卡功能     |
+|            [ChatTTS-fork](https://github.com/yihong0618/ChatTTS)             | ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)  | Pypi 包一键安装，便于小白体验项目效果          |
+|           [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            | ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)  | 提供了完善的 ChatTTS 封装，适合技术流深入研究    |
+|        [ChatTTS-Control](https://github.com/libukai/ChatTTS-Control)         |  ![Star](https://img.shields.io/github/stars/libukai/ChatTTS-Control)  | 提供更多控制参数和详细解读，汇总相关资源推荐         |
+|         [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)  | ComfyUi 版本，可作为工作流节点引入          |
+|  [ChatTTS](https://github.com/Kedreamix/ChatTTS)  | ![Star](https://img.shields.io/github/stars/Kedreamix/ChatTTS)  | 技术向的源代码解读，可以帮助更好的理解技术原理        |
 | [ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) | ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)  | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 
 ---
