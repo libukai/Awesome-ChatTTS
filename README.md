@@ -20,6 +20,7 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 | [Colab](https://colab.research.google.com/github/6drf21e/ChatTTS_colab/blob/main/chattts_webui_mix.ipynb) | Colab 一键部署，需要有 Google 账号 |
 |                    [Win/Mac](https://pan.baidu.com/s/1t3XddrF8KBJ2dYqmwvqOQw?pwd=nmhx)                    | Win/Mac 安装包，界面美观还能降噪     |
 |                              [Linux](https://pypi.org/project/chattts-fork/)                              | Python 整合包，使用命令行安装和使用    |
+| [Samples](http://ttslist.aiqbh.com/) | 提供了一些音色种子的示例，可以直接体验      |
 
 
 ## 热门分支
