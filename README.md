@@ -227,7 +227,7 @@ character_map = {
 需要根据 **安装指南** 完成环境配置后，再安装 `pynini` 和 `nemo_text_processing` 依赖
 
 ``` bash
-conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
+conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 ```
 
 4、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
