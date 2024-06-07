@@ -67,7 +67,7 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 
 ## 固定音色
 
-经过代码审查和实际测试，指定音色种子值每次生成 `spk_emb` 和重复使用预生成好的 `spk_emb` 效果有细微差异，但基本一致，因此建议直接使用种子值更加便捷。
+经过代码审查和实际测试，指定音色种子值每次生成 `spk_emb` 和重复使用预生成好的 `spk_emb` 效果有细微差异，但基本一致，因此建议直接使用相同的 `Audio Seed` 值。
 
 在 [samples](https://github.com/libukai/ChatTTS-Control/tree/main/samples) 目录下提供了一些音色种子的示例，可以通过这些示例来选择合适的音色种子。
 
