@@ -108,7 +108,7 @@ pip install -r requirements.txt
 ```
 4. 安装中文依赖
 ``` bash
-conda install -c conda-forge pynini=2.1.5 && pip install nemo_text_processing
+conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 ```
 5. 出现如下报错，Windows 设备需要按 [教程](https://www.cnblogs.com/ajianbeyourself/p/17654155.html) 配置环境路径
 ```bash
