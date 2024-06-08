@@ -227,7 +227,7 @@ character_map = {
 
 3、`local variable 'Normalizer' referenced before assignment`
 
-需要根据 **安装指南** 完成环境配置后，再安装 `pynini` 和 `nemo_text_processing` 依赖
+需要根据 **安装指南** 完成环境配置后，再安装 `pynini` 和 `WeTextProcessing` 依赖
 
 ``` bash
 conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
