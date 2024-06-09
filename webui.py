@@ -109,8 +109,8 @@ def playground():
     """创建 Web-UI 交互界面"""
 
     with gr.Blocks() as demo:
-        gr.Markdown("# ChatTTS-Control Webui")
-        gr.Markdown("ChatTTS-Control Model: [libukai/ChatTTS-Control](https://github.com/libukai/ChatTTS-Control)")
+        gr.Markdown("# Awesome-ChatTTS Webui")
+        gr.Markdown("Fork from [ChatTTS](https://github.com/2noise/ChatTTS) , 新手指南: [libukai/Awesome-ChatTTS](https://github.com/libukai/Awesome-ChatTTS)")
 
         default_text = "曾经有一份真挚的爱情摆在我的面前，但是我没有珍惜，等我失去后才后悔莫及，尘世间最痛苦地事情莫过于此。\n\n如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。 如果非要在这份爱上加上一个期限，我希望是…… 一万年。"
         text_input = gr.Textbox(label="Input Text", lines=4, placeholder="Please Input Text...", value=default_text)
