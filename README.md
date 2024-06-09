@@ -120,7 +120,7 @@ ModuleNotFoundError : No module named'Cython'
 python webui.py
 
 # 首次运行会下载模型，如果可以科学上网请耐心等待下载完成
-# 如果无法下载，可以参考 **模型下载** 问题中的解决方案修改代码
+# 如果无法下载，可以参考 **模型无法下载** 问题中的解决方案修改代码
 # 显示以下信息，则表示运行成功：
 
 Running on local URL:  http://0.0.0.0:8080
@@ -216,17 +216,19 @@ character_map = {
 
 ## 报错速查
 
-官方示例以 IPython 为基础，导致在终端和其他 IDE 运行时缺少了很多依赖，可以根据报错进行安装。
-
 1、`load_models() got an unexpected keyword argument 'source'`
 
-详见 **常见问题 - 模型下载**
+详见 **常见问题 - 模型无法下载**
 
 2、`cannot import name 'CommitOperationAdd' from 'huggingface_hub'`
    
-详见 **常见问题 - 模型下载**
+详见 **常见问题 - 模型无法下载**
 
-3、`local variable 'Normalizer' referenced before assignment`
+3、 `FileNotFoundError：［Erzno 2］ No such file or directory： 'C：\\Users\\xxx\\.cache\\huggingface\\hub\\models--2Noise--ChatTTS\\snapshots\`
+
+详见 **常见问题 - 模型无法下载**
+
+4、`local variable 'Normalizer' referenced before assignment`
 
 需要根据 **安装指南** 完成环境配置后，再安装 `pynini` 和 `WeTextProcessing` 依赖
 
@@ -234,15 +236,15 @@ character_map = {
 conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 ```
 
-4、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
+5、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
 
 详见 **常见问题 - 音频保存**
 
-5、`Could not find a version that satisfies the requirement torch~=2.1.0`
+6、`Could not find a version that satisfies the requirement torch~=2.1.0`
 
 详见 **常见问题 - 依赖版本**
 
-6、`ModuleNotFoundError : No module named'Cython'`
+7、`ModuleNotFoundError : No module named'Cython'`
 
 详见 **安装指南**
 
