@@ -28,7 +28,7 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 |                                      项目                                      |                                     Star                                      | 亮点                               |
 |:----------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|----------------------------------|
 |             [2noise/ChatTTS](https://github.com/2noise/ChatTTS)              |          ![Star](https://img.shields.io/github/stars/2noise/ChatTTS)          | 源仓库，问题较多，请参见下方解决方案               |
-|    [jianchang512/ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)     |     ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)      | 提供 API，方便与其他项目集成                 |
+|    [jianchang512/ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)     |     ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)      | 整理了详细的安装说明， 尤其是 GPU 相关问题         |
 |          [6drf21e/ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)           |      ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)       | Google Colab 一键部署，还有音色抽卡功能       |
 |            [yihong0618/ChatTTS](https://github.com/yihong0618/ChatTTS)             |        ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)        | Pypi 包一键安装，便于小白体验项目效果            |
 |           [lenML/ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            |       ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)        | 提供了 ChatTTS 封装，适合技术流深入研究         |
@@ -213,6 +213,10 @@ character_map = {
     '？': ',',
     }
 ```
+
+### GPU 无法使用
+
+GPU 至少需要 4G 显存，否则将强制使用 CPU，相关问题可以参考 [ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui) 项目中的说明
 
 ## 报错速查
 
