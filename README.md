@@ -34,6 +34,7 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 |           [ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            |       ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)        | 提供了 ChatTTS 封装，适合技术流深入研究         |
 |         [ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |      ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)       | ComfyUi 版本，可作为工作流节点引入            |
 |               [ChatTTS](https://github.com/Kedreamix/ChatTTS)                |        ![Star](https://img.shields.io/github/stars/Kedreamix/ChatTTS)         | 技术向的源代码解读，可以帮助更好的理解技术原理          |
+|            [ChatTTS-API](https://github.com/CyberWon/ChatTTS-API)            |       ![Star](https://img.shields.io/github/stars/CyberWon/ChatTTS-API)       | 增强版 API 接口，带有流式输出能力              |
 | [ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) | ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker) | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 
 ---
