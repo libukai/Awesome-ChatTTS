@@ -266,4 +266,4 @@ conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 
 ## 项目趋势
 
-[![Star History Chart](https://api.star-history.com/svg?repos=libukai/ChatTTS-Control&type=Date)](https://star-history.com/#libukai/ChatTTS-Control&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=libukai/Awesome-ChatTTS&type=Date)](https://star-history.com/#libukai/ChatTTS-Control&Date)
