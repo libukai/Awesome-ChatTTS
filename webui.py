@@ -8,6 +8,7 @@ import gradio as gr
 import numpy as np
 
 import ChatTTS
+from modelscope import snapshot_download
 
 dotenv.load_dotenv()
 
@@ -38,16 +39,10 @@ def create_chat(local_path=None):
 
     """创建ChatTTS实例"""
 
-    local_model_path = os.getenv('MODEL_LOCAL_PATH', None)
+    model_dir = snapshot_download('pzc163/chatTTS')
 
-    # 导入模型实例
     chat = ChatTTS.Chat()
-
-    if local_model_path is None:
-        chat.load_models()
-    else:
-        print('local model path:', local_model_path)
-        chat.load_models('local', local_path=local_model_path)
+    chat.load_models(source='local', local_path=model_dir, compile=True)
 
     return chat
 
