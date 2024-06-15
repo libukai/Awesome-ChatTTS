@@ -39,6 +39,7 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 |            [CyberWon/ChatTTS-API](https://github.com/CyberWon/ChatTTS-API)            |       ![Star](https://img.shields.io/github/stars/CyberWon/ChatTTS-API)       | 增强版 API 接口，带有流式输出能力              |
 | [Jackiexiao/ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) | ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker) | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 | [HKoon/ChatTTS-OpenVoice](https://github.com/HKoon/ChatTTS-OpenVoice) |                 ![Star](https://img.shields.io/github/stars/HKoon/ChatTTS-OpenVoice)                 | 使用 OpenVoice 进行声音克隆后生成新的语音       |
+| [TommyZihao/ChatTTS_Tutorials](https://github.com/TommyZihao/ChatTTS_Tutorials) |                 ![Star](https://img.shields.io/github/stars/TommyZihao/ChatTTS_Tutorials)                 | 同济子豪兄ChatTTS手把手视频教程：基础、进阶、大模型玩法       |
 
 ---
 
