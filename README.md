@@ -1,9 +1,10 @@
 # Awesome-ChatTTS
 
-Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源，是 ChatTTS 的最佳入门指南。
+本项目整理和汇总了 ChatTTS 项目的常见问题和相关资源，是 ChatTTS 的最佳入门指南。
 
-如果您觉得有用，还请打赏个 Star 支持一下。
+如果觉得对你使用 ChatTTS 有用，还请打赏个 ⭐️ 支持一下。
 
+* [官方简介](#官方简介)
 * [快速体验](#快速体验)
 * [热门分支](#热门分支)
 * [参数说明](#参数说明)
@@ -12,17 +13,21 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 * [常见问题](#常见问题)
 * [报错速查](#报错速查)
 
+## 官方简介
+
+
+
 ## 快速体验
 
-|                                                    网址                                                     | 亮点                       |
-|:---------------------------------------------------------------------------------------------------------:|--------------------------|
-|                                   [Web](https://chattts.in/playground)                                    | 原版网页版体验                  |
-|                                [Forge Web](https://chattts.in/playground)                                 | Forge 网页版体验              |
-|                  [OpenVoice Web](https://huggingface.co/spaces/Hilley/ChatTTS-OpenVoice)                  | OpenVoice 网页版体验          |
-| [Colab](https://colab.research.google.com/github/6drf21e/ChatTTS_colab/blob/main/chattts_webui_mix.ipynb) | Colab 一键部署，需要有 Google 账号 |
-|                    [Win/Mac](https://pan.baidu.com/s/1t3XddrF8KBJ2dYqmwvqOQw?pwd=nmhx)                    | Win/Mac 安装包，界面美观还能降噪     |
-|                              [Linux](https://pypi.org/project/chattts-fork/)                              | Python 整合包，使用命令行安装和使用    |
-|                                   [Samples](http://ttslist.aiqbh.com/)                                    | 音色种子打标与评估，可以快速体验和下载      |
+|                                                    网址                                                     | 亮点                    |
+|:---------------------------------------------------------------------------------------------------------:|-----------------------|
+|                                   [Web](https://chattts.in/playground)                                    | 原版网页版体验               |
+| [Colab](https://colab.research.google.com/github/6drf21e/ChatTTS_colab/blob/main/chattts_webui_mix.ipynb) | 原版代码版体验               |
+|                                [Forge Web](https://huggingface.co/spaces/lenML/ChatTTS-Forge)                                 | Forge 功能增强版体验         |
+|                  [OpenVoice Web](https://huggingface.co/spaces/Hilley/ChatTTS-OpenVoice)                  | OpenVoice 语音克隆版体验     |
+|                    [Win/Mac](https://pan.baidu.com/s/1t3XddrF8KBJ2dYqmwvqOQw?pwd=nmhx)                    | Win/Mac 安装包，界面美观带降噪功能 |
+|                              [Linux](https://pypi.org/project/chattts-fork/)                              | Python 整合一键包，后续等待官方更新 |
+|                                   [Samples](http://ttslist.aiqbh.com/)                                    | 音色种子打标与评估，可以下载使用      |
 
 ## 热门分支
 
@@ -33,10 +38,10 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 |          [6drf21e/ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)           |                  ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)                  | Google Colab 一键部署快速体验            |
 |           [lenML/ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            |                   ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)                   | 提供了 ChatTTS 封装，适合技术流深入研究         |
 |            [yihong0618/ChatTTS](https://github.com/yihong0618/ChatTTS)             |                   ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)                    | Pypi 包一键安装，便于小白体验项目效果            |
+| [6drf21e/ChatTTS_Speaker](https://github.com/6drf21e/ChatTTS_Speaker) |                 ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_Speaker)                 | 音色角色打标与稳定性评估                     |
 |         [AIFSH/ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |                  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)                  | ComfyUi 版本，可作为工作流节点引入            |
 |               [Kedreamix/ChatTTS](https://github.com/Kedreamix/ChatTTS)                |                    ![Star](https://img.shields.io/github/stars/Kedreamix/ChatTTS)                    | 技术向的源代码解读                        |
 |            [CyberWon/ChatTTS-API](https://github.com/CyberWon/ChatTTS-API)            |                  ![Star](https://img.shields.io/github/stars/CyberWon/ChatTTS-API)                   | 增强版 API 接口，带有流式输出能力              |
-| [6drf21e/ChatTTS_Speaker](https://github.com/6drf21e/ChatTTS_Speaker) |                 ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_Speaker)                 | 音色角色打标与稳定性评估                     |
 | [HKoon/ChatTTS-OpenVoice](https://github.com/HKoon/ChatTTS-OpenVoice) |                 ![Star](https://img.shields.io/github/stars/HKoon/ChatTTS-OpenVoice)                 | 配合 OpenVoice 进行声音克隆              |
 | [Jackiexiao/ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) |            ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)             | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 | [MaterialShadow/ChatTTS-manager](https://github.com/MaterialShadow/ChatTTS-manager) |            ![Star](https://img.shields.io/github/stars/MaterialShadow/ChatTTS-manager)             | 提供了音色管理系统和 WebUI 界面              |
@@ -50,12 +55,20 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 |                      [ZTFS](https://www.bilibili.com/video/BV1nZ421p74z/?vd_source=6773fc664ee1e277b8a2290d66ebb7a3)                      | Mac M1 部署教程   |
 | [王-寳寳](https://www.bilibili.com/video/BV1Ji421U74a/?spm_id_from=333.337.search-card.all.click&vd_source=6773fc664ee1e277b8a2290d66ebb7a3) | Windows 部署教程  |
 
-
 ---
+
+## 讨论社区
+
+* [官方项目 Issues](https://github.com/2noise/ChatTTS/issues)
+* 官方讨论 QQ 群：
+  - 808364215 (已满) 
+  - 230696694 (已满) 
+  - 933639842（可加入）
+
 
 ## 参数说明
 
-本项目在原版项目的基础上，增加了更多的参数，方便用户进行更细致的控制。
+本项目在原版项目 WebUI 的基础上，增加了更多的控制参数，方便用户进行更细致的测试。
 
 ![配置项说明](readme/web-ui.png)
 
@@ -91,6 +104,14 @@ Awesome-ChatTTS 整理和汇总了 ChatTTS 项目的常见问题和相关资源�
 ## 安装指南
 
 本安装指南适用于需要运行源仓库代码的用户，小白用户建议使用 [快速体验](#快速体验) 中的方法。
+
+### 快速安装
+
+```bash
+pip install git+https://github.com/2noise/ChatTTS
+```
+
+### 手动安装
 
 1. 根据设备类型，下载 [Miniconda](https://docs.anaconda.com/free/miniconda/) 并安装
 2. 在终端中下载项目代码
