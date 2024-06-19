@@ -15,7 +15,7 @@
 
 ## 官方简介
 
-
+https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b92-301c732e8b63
 
 ## 快速体验
 
