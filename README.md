@@ -48,7 +48,6 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 | [Jackiexiao/ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) |            ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)             | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 | [MaterialShadow/ChatTTS-manager](https://github.com/MaterialShadow/ChatTTS-manager) |            ![Star](https://img.shields.io/github/stars/MaterialShadow/ChatTTS-manager)             | 提供了音色管理系统和 WebUI 界面              |
 
----
 ## 视频教程
 
 |                                                                    视频                                                                     | 亮点            |
@@ -57,7 +56,6 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 |                      [ZTFS](https://www.bilibili.com/video/BV1nZ421p74z/?vd_source=6773fc664ee1e277b8a2290d66ebb7a3)                      | Mac M1 部署教程   |
 | [王-寳寳](https://www.bilibili.com/video/BV1Ji421U74a/?spm_id_from=333.337.search-card.all.click&vd_source=6773fc664ee1e277b8a2290d66ebb7a3) | Windows 部署教程  |
 
----
 
 ## 讨论社区
 
@@ -93,8 +91,6 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 * **Audio Seed** : 配置音色种子值，不同种子对应不同音色，不同种子间差异性较大
 * **Text Seed** : 配置情感种子值，不同种子对应不同情感，不同种子间差异性较小
 
----
-
 ## 固定音色
 
 经过代码审查和实际测试，指定音色种子值每次生成 `spk_emb` 和重复使用预生成好的 `spk_emb` 效果有细微差异，建议有能力优先使用 `.pt` 音色文件。
@@ -118,24 +114,24 @@ pip install git+https://github.com/2noise/ChatTTS
 1. 根据设备类型，下载 [Miniconda](https://docs.anaconda.com/free/miniconda/) 并安装
 2. 在终端中下载项目代码
 ``` bash
-https://github.com/libukai/ChatTTS-Control.git
+git clone https://github.com/2noise/ChatTTS
 ```
-3. 进入项目目录，安装基本依赖
+3. 进入项目目录
 ``` bash
-cd ChatTTS-Control
+cd ChatTTS
+```
+4. 创建 conda 环境并激活
+```bash
+conda create -n chattts
+conda activate chattts
+```
+5. 安装基本依赖
+```bash
 pip install -r requirements.txt
 ```
-4. 安装中文依赖
+6. 运行 web-ui
 ``` bash
-conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
-```
-5. 出现如下报错，Windows 设备需要按 [教程](https://www.cnblogs.com/ajianbeyourself/p/17654155.html) 配置环境路径
-```bash
-ModuleNotFoundError : No module named'Cython'
-```
-5. 运行 web-ui
-``` bash
-python webui.py
+python examples/web/webui.py
 
 # 首次运行会下载模型，如果可以科学上网请耐心等待下载完成
 # 如果无法下载，可以参考 **模型无法下载** 问题中的解决方案修改代码
@@ -143,7 +139,7 @@ python webui.py
 
 Running on local URL:  http://0.0.0.0:8080
 ```
-6. 打开浏览器访问 http://localhost:8080
+7. 打开浏览器访问 http://localhost:8080
 
 ## 常见问题
 
@@ -151,29 +147,30 @@ Running on local URL:  http://0.0.0.0:8080
 
 ### 依赖版本过低
 
-原版项目中 `requirement.txt` 中列出的依赖版本较老，在部分环境下可能会出现报错，可以根据报错信息安装更高版本。
-
-本项目建议使用 Python 3.10，`torch` 及相关依赖升级至 2.3.0。
+老版项目中 `requirement.txt` 中列出的依赖版本较老，在部分环境下可能会出现报错，建议更新至最新版依赖文件。
 
 ```conf
-omegaconf~=2.3.0
-torch~=2.3.0
-torchaudio==2.3.0
-tqdm~=4.66.4
-einops~=0.8.0
-vector-quantize-pytorch~=1.14.24
-transformers~=4.41.1
-vocos~=0.1.0
-ipython==8.25.0
-huggingface-hub~=0.23.2
-gradio~=4.32.2
-numpy~=1.26.4
-modelscope==1.15.0
+numpy<2.0.0
+omegaconf>=2.3.0
+torch>=2.1.0
+tqdm
+vector_quantize_pytorch
+transformers>=4.41.1
+vocos
+IPython
+gradio
+python-dotenv
+pynini==2.1.5
+WeTextProcessing
+nemo_text_processing
 ```
 
 ### 模型无法下载
 
-原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，请从 [modelscope](https://www.modelscope.cn/models/pzc163/chatTTS/summary) 或者 [hf-mirror](https://hf-mirror.com/2Noise/ChatTTS) 上下载模型，并配置本地路径。
+原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，可以从 [modelscope](https://www.modelscope.cn/models/pzc163/chatTTS/summary) 上下载模型和配置，并配置本地路径。
+
+> [!Important]
+> 魔塔上的模型库是由志愿者维护的，不保证所有模型都是最新的，如果有需要请自行验证。
 
 1. 在终端中安装 modelscope 依赖
 
@@ -184,31 +181,17 @@ pip install modelscope
 2. 修改 webui.py 中的代码
 
 ``` python
-# 第 10 行添加导入依赖
+# 在开头导入依赖，并下载模型和配置
 from modelscope import snapshot_download
+model_dir = snapshot_download('zlj2546/ChatTTS')
 
-# 第 102 行添加模型下载代码
-model_dir = snapshot_download('pzc163/chatTTS')
-
-# 第 104 行修改模型路径
-chat.load_models(source='local', local_path=model_dir)
+# 第 118 行修改模型路径
+ret = chat.load_models('custom', custom_path=model_dir)
 ```
-![modelscope.png](readme/modelscope.png)
 
 ### 音频无法保存
 
 通过脚本运行时，音频保存官方推荐使用 torchaudio，实测最新版本已经可以正常运行。如果运行有问题，也可以使用 soundfile 库进行音频保存。
-
- 1. 官方示例中 torchaudio 代码有误，需要进行修正：
-
-``` python
-import torchaudio
-#  需要将 chat.infer 生成的文件对象修正为 wavs
-wavs = chat.infer(text, skip_refine_text=True, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
-torchaudio.save("output2.wav", torch.from_numpy(wavs[0]), 24000)
-```
-
-2. 也可以使用 soundfile 库进行音频保存：
 
 ``` python
 import soundfile
@@ -268,9 +251,8 @@ conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 
 7、`ModuleNotFoundError : No module named'Cython'`
 
-详见 **安装指南**
+未找到 Python 执行路径，Windows 设备需要按 [教程](https://www.cnblogs.com/ajianbeyourself/p/17654155.html) 配置环境路径
 
----
 
 ## 项目趋势
 
