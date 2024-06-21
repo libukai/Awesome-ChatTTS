@@ -1,6 +1,8 @@
 # Awesome-ChatTTS
 
-本项目整理和汇总了 ChatTTS 项目的常见问题和相关资源，是 ChatTTS 的最佳入门指南。
+本项目是官方推荐的 ChatTTS 最佳入门指南，整理和汇总了常见问题和相关资源。
+
+如有好的项目推荐或者自荐，请在 issues 中留言，我会在验证后添加。
 
 如果觉得对你使用 ChatTTS 有用，还请打赏个 ⭐️ 支持一下。
 
@@ -68,7 +70,7 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 
 ## 参数说明
 
-本项目在原版项目 WebUI 的基础上，增加了更多的控制参数，方便用户进行更细致的测试。
+本图示仅用于展示各参数的含义，对应的 WebUI 还在等待 PR 合并中，请关注源仓库 [2noise/ChatTTS](https://github.com/2noise/ChatTTS) 的更新。
 
 ![配置项说明](readme/web-ui.png)
 
@@ -145,7 +147,7 @@ Running on local URL:  http://0.0.0.0:8080
 
 ## 常见问题
 
-源仓库代码中的问题较多，可以根据以下清单快速解决。
+源仓库代码直接运行可能遇到的问题较多，可以根据以下清单快速解决。
 
 ### 依赖版本过低
 
@@ -270,17 +272,6 @@ conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 
 ---
 
-## 代码说明
-
-本项目代码在原版项目代码的基础上进行了一些优化和整理，主要包括以下几个方面：
-
-1. 使用国内模型下载代码方式，减少了可能出现的模型下载失败的问题。
-2. 抽离了更多参数，优化版 web-ui 中可以更加方便地进行调整。
-3. 添加了遗漏的需处理的中文标点字符，修复了生成的语音中可能出现的读出控制单元的问题。
-4. 增加了多音字的初步处理，主要是“得”和“地”，使生成的语音听起来更加自然流畅。
-5. 增加了长文本分段功能，分段处理后自动再合并为单个音频文件，避免了过长的文本生成效果失控的问题。
-6. 增加了 script.py 示例脚本，包含了常见问题中解决方案的说明 。
-
 ## 项目趋势
 
-[![Star History Chart](https://api.star-history.com/svg?repos=libukai/Awesome-ChatTTS&type=Date)](https://star-history.com/#libukai/ChatTTS-Control&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=libukai/Awesome-ChatTTS&type=Date)](https://star-history.com/#libukai/Awesome-ChatTTS&Date)
