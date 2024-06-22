@@ -10,7 +10,7 @@
 * [快速体验](#快速体验)
 * [热门分支](#热门分支)
 * [参数说明](#参数说明)
-* [固定音色](#固定音色)
+* [音色种子](#音色种子)
 * [安装指南](#安装指南)
 * [常见问题](#常见问题)
 * [报错速查](#报错速查)
@@ -91,13 +91,17 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 * **Audio Seed** : 配置音色种子值，不同种子对应不同音色，不同种子间差异性较大
 * **Text Seed** : 配置情感种子值，不同种子对应不同情感，不同种子间差异性较小
 
-## 固定音色
+## 音色种子
 
 经过代码审查和实际测试，指定音色种子值每次生成 `spk_emb` 和重复使用预生成好的 `spk_emb` 效果有细微差异，建议有能力优先使用 `.pt` 音色文件。
 
 在 [ttwwwaa/ChatTTS_Speaker](https://modelscope.cn/studios/ttwwwaa/ChatTTS_Speaker/summary) 项目中对音色种子进行了初步打标和稳定性评估，可以快速通过示例来选择合适的音色种子。
 
 ![sample.png](readme/sample.png)
+
+此外，也可以尝试使用 [ChatTTS Voice Cloning](http://region-9.autodl.pro:41137/) 自行克隆需要的音色。
+
+![clone.png](readme/clone.png)
 
 ## 安装指南
 
