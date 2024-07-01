@@ -47,12 +47,13 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 | [HKoon/ChatTTS-OpenVoice](https://github.com/HKoon/ChatTTS-OpenVoice) |                 ![Star](https://img.shields.io/github/stars/HKoon/ChatTTS-OpenVoice)                 | 配合 OpenVoice 进行声音克隆              |
 | [Jackiexiao/ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) |            ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)             | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
 | [MaterialShadow/ChatTTS-manager](https://github.com/MaterialShadow/ChatTTS-manager) |            ![Star](https://img.shields.io/github/stars/MaterialShadow/ChatTTS-manager)             | 提供了音色管理系统和 WebUI 界面              |
+| [TommyZihao/ChatTTS_Tutorials](https://github.com/TommyZihao/ChatTTS_Tutorials)  |            ![Star](https://img.shields.io/github/stars/TommyZihao/ChatTTS_Tutorials)             |     代码教程：五分钟部署开源语音合成神器ChatTTS          |
 
 ## 视频教程
 
 |                                                                    视频                                                                     | 亮点            |
 |:-----------------------------------------------------------------------------------------------------------------------------------------:|---------------|
-|                     [同济子豪兄](https://www.bilibili.com/video/BV1Ui421v7JU/?vd_source=b958002f14b88fc59432b810e4448b72)                      | 从入门到进阶的详细部署教程 |
+|                     [同济子豪兄](https://www.bilibili.com/video/BV1Ui421v7JU/?vd_source=b958002f14b88fc59432b810e4448b72)                      | 从入门到进阶的详细部署教程|
 |                      [ZTFS](https://www.bilibili.com/video/BV1nZ421p74z/?vd_source=6773fc664ee1e277b8a2290d66ebb7a3)                      | Mac M1 部署教程   |
 | [王-寳寳](https://www.bilibili.com/video/BV1Ji421U74a/?spm_id_from=333.337.search-card.all.click&vd_source=6773fc664ee1e277b8a2290d66ebb7a3) | Windows 部署教程  |
 
