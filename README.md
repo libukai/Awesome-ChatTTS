@@ -1,7 +1,5 @@
 ![awesome.webp](readme/awesome.webp)
 
-# Awesome-ChatTTS
-
 Awesome-ChatTTS 是官方推荐的 ChatTTS 资源汇总项目，欢迎在 issues 中推荐或者自荐。 
 
 如果觉得本项目对你了解和使用 ChatTTS 有帮助，还请打赏个 ⭐️ 支持一下。
