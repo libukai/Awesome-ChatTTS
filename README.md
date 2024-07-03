@@ -1,11 +1,5 @@
 ![awesome.webp](readme/awesome.webp)
 
-<div align="center">
-
-**English** | [简体中文](./README-CN)
-
-</div>
-
 Awesome-ChatTTS is the officially recommended collection of ChatTTS resources. Feel free to recommend or self-recommend in the issues.
 
 If you find this project helpful in using ChatTTS, please give it a ⭐️ to show your support.
@@ -20,7 +14,6 @@ If you find this project helpful in using ChatTTS, please give it a ⭐️ to sh
 * [Tone Control](#tone-control)
 * [Beginner Tutorial](#beginner-tutorial)
 * [FAQs](#faqs)
-* [Error Quick Check](#error-quick-check)
 
 ## Official Introduction
 
