@@ -20,7 +20,6 @@ If you find this project helpful in using ChatTTS, please give it a ⭐️ to sh
 * [Tone Control](#tone-control)
 * [Beginner Tutorial](#beginner-tutorial)
 * [FAQs](#faqs)
-* [Error Quick Check](#error-quick-check)
 
 ## Official Introduction
 
