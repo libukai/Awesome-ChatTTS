@@ -1,17 +1,20 @@
+![awesome.webp](readme/awesome.webp)
+
 # Awesome-ChatTTS
 
-本项目是官方推荐的 ChatTTS 最佳入门指南，整理和汇总了常见问题和相关资源。
+Awesome-ChatTTS 是官方推荐的 ChatTTS 资源汇总项目，欢迎在 issues 中推荐或者自荐。 
 
-如有好的项目推荐或者自荐，请在 issues 中留言，我会在验证后添加。
+如果觉得本项目对你了解和使用 ChatTTS 有帮助，还请打赏个 ⭐️ 支持一下。
 
-如果觉得对你使用 ChatTTS 有用，还请打赏个 ⭐️ 支持一下。
+> [!NOTE]
+> 以下项目均为社区资源，查看官方信息请到源仓库 [2noise/ChatTTS](https://github.com/2noise/ChatTTS/blob/main/docs/cn/README.md) 。
 
 * [官方简介](#官方简介)
 * [快速体验](#快速体验)
 * [热门分支](#热门分支)
-* [参数说明](#参数说明)
-* [音色种子](#音色种子)
-* [安装指南](#安装指南)
+* [界面说明](#界面说明)
+* [音色控制](#音色控制)
+* [入门教程](#入门教程)
 * [常见问题](#常见问题)
 * [报错速查](#报错速查)
 
@@ -21,34 +24,109 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 
 ## 快速体验
 
-|                                                    网址                                                     | 亮点                    |
-|:---------------------------------------------------------------------------------------------------------:|-----------------------|
-|                                   [Web](https://chattts.in/playground)                                    | 原版网页版体验               |
-| [Colab](https://colab.research.google.com/github/6drf21e/ChatTTS_colab/blob/main/chattts_webui_mix.ipynb) | 原版代码版体验               |
-|                                [Forge Web](https://huggingface.co/spaces/lenML/ChatTTS-Forge)                                 | Forge 功能增强版体验         |
-|                  [OpenVoice Web](https://huggingface.co/spaces/Hilley/ChatTTS-OpenVoice)                  | OpenVoice 语音克隆版体验     |
-|                    [Win/Mac](https://pan.baidu.com/s/1t3XddrF8KBJ2dYqmwvqOQw?pwd=nmhx)                    | Win/Mac 安装包，界面美观带降噪功能 |
-|                              [Linux](https://pypi.org/project/chattts-fork/)                              | Python 整合一键包，后续等待官方更新 |
-|                                   [Samples](http://ttslist.aiqbh.com/)                                    | 音色种子打标与评估，可以下载使用      |
+|                               网址                               | 类型          |
+|:--------------------------------------------------------------:|-------------|
+|           [ Original Web](https://chattts.com/#Demo)           | 原版网页版体验     |
+| [Forge Web](https://huggingface.co/spaces/lenML/ChatTTS-Forge) | Forge 增强版体验 |
+|           [Linux](https://pypi.org/project/ChatTTS/)           | Python 安装包  |
+|              [Samples](http://ttslist.aiqbh.com/)              | 音色种子示例      |
+|          [Cloning](http://region-9.autodl.pro:41137/)          | 音色克隆体验      |
 
 ## 热门分支
 
-|                                      项目                                      |                                                 Star                                                 | 亮点                               |
-|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|----------------------------------|
-|             [2noise/ChatTTS](https://github.com/2noise/ChatTTS)              |                     ![Star](https://img.shields.io/github/stars/2noise/ChatTTS)                      | 源仓库，问题较多，请参见下方解决方案               |
-|    [jianchang512/ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)     |                 ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)                 | 整理了详细的安装说明， 尤其是 GPU 相关问题         |
-|          [6drf21e/ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)           |                  ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)                  | Google Colab 一键部署快速体验            |
-|           [lenML/ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)            |                   ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)                   | 提供了 ChatTTS 封装，适合技术流深入研究         |
-|            [yihong0618/ChatTTS](https://github.com/yihong0618/ChatTTS)             |                   ![Star](https://img.shields.io/github/stars/yihong0618/ChatTTS)                    | Pypi 包一键安装，便于小白体验项目效果            |
-| [6drf21e/ChatTTS_Speaker](https://github.com/6drf21e/ChatTTS_Speaker) |                 ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_Speaker)                 | 音色角色打标与稳定性评估                     |
-|         [AIFSH/ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |                  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)                  | ComfyUi 版本，可作为工作流节点引入            |
-|               [Kedreamix/ChatTTS](https://github.com/Kedreamix/ChatTTS)                |                    ![Star](https://img.shields.io/github/stars/Kedreamix/ChatTTS)                    | 技术向的源代码解读                        |
-|            [CyberWon/ChatTTS-API](https://github.com/CyberWon/ChatTTS-API)            |                  ![Star](https://img.shields.io/github/stars/CyberWon/ChatTTS-API)                   | 增强版 API 接口，带有流式输出能力              |
-| [HKoon/ChatTTS-OpenVoice](https://github.com/HKoon/ChatTTS-OpenVoice) |                 ![Star](https://img.shields.io/github/stars/HKoon/ChatTTS-OpenVoice)                 | 配合 OpenVoice 进行声音克隆              |
-| [Jackiexiao/ChatTTS-api-ui-docker](https://github.com/Jackiexiao/ChatTTS-api-ui-docker) |            ![Star](https://img.shields.io/github/stars/Jackiexiao/ChatTTS-api-ui-docker)             | 提供 腾讯云 Docker 镜像，仅支持带 CUDA 的 GPU |
-| [MaterialShadow/ChatTTS-manager](https://github.com/MaterialShadow/ChatTTS-manager) |            ![Star](https://img.shields.io/github/stars/MaterialShadow/ChatTTS-manager)             | 提供了音色管理系统和 WebUI 界面              |
+### 功能增强
 
-## 视频教程
+|                                   项目                                    |                                 Star                                  | 亮点                   |
+|:-----------------------------------------------------------------------:|:---------------------------------------------------------------------:|----------------------|
+|  [jianchang512/ChatTTS-ui](https://github.com/jianchang512/ChatTTS-ui)  | ![Star](https://img.shields.io/github/stars/jianchang512/ChatTTS-ui)  | 提供 API 接口，可在第三方应用中调用 |
+|    [6drf21e/ChatTTS_colab](https://github.com/6drf21e/ChatTTS_colab)    |  ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_colab)   | 提供流式输出，支持长音频生成和分角色阅读 |
+|      [lenML/ChatTTS-Forge](https://github.com/lenML/ChatTTS-Forge)      |   ![Star](https://img.shields.io/github/stars/lenML/ChatTTS-Forge)    | 提供人声增强和背景降噪，可使用附加提示词 |
+| [CCmahua/ChatTTS-Enhanced](https://github.com/CCmahua/ChatTTS-Enhanced) | ![Star](https://img.shields.io/github/stars/CCmahua/ChatTTS-Enhanced) | 支持文件批量处理，以及导出 SRT 文件 |
+|  [HKoon/ChatTTS-OpenVoice](https://github.com/HKoon/ChatTTS-OpenVoice)  | ![Star](https://img.shields.io/github/stars/HKoon/ChatTTS-OpenVoice)  | 配合 OpenVoice 进行声音克隆  |
+
+### 功能扩展
+
+|                                      项目                                      |                                                 Star                                                 | 亮点                            |
+|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|-------------------------------|
+| [6drf21e/ChatTTS_Speaker](https://github.com/6drf21e/ChatTTS_Speaker) |                 ![Star](https://img.shields.io/github/stars/6drf21e/ChatTTS_Speaker)                 | 音色角色打标与稳定性评估                  |
+|         [AIFSH/ComfyUI-ChatTTS](https://github.com/AIFSH/ComfyUI-ChatTTS)          |                  ![Star](https://img.shields.io/github/stars/AIFSH/ComfyUI-ChatTTS)                  | ComfyUi 版本，可作为工作流节点引入         |
+| [MaterialShadow/ChatTTS-manager](https://github.com/MaterialShadow/ChatTTS-manager) |            ![Star](https://img.shields.io/github/stars/MaterialShadow/ChatTTS-manager)             | 提供了音色管理系统和 WebUI 界面           |
+
+
+## 界面说明
+
+![配置项说明](readme/WebUI-CN.png)
+
+### 文本控制
+
+* **1. Input Text** : 需要转换的文本，支持中文和英文混杂
+* **2. Refine text** : 是否对文本进行口语化处理
+* **3. Text Seed** : 配置文本种子值，不同种子对应不同口语化风格
+* **4. 🎲** : 随机产生文本种子值
+* **5. Output Text** :  口语化处理后生成的文本
+
+### 音色控制
+
+* **6. Timbre** : 预设的音色种子值
+* **7. Audio Seed** : 配置音色种子值，不同种子对应不同音色
+* **8. 🎲** : 随机产生音色种子值
+* **9. Speaker Embedding** : 音色码，详见 [音色控制](#音色控制)
+
+### 情感控制
+
+* **10. temperate** : 控制音频情感波动性，范围为 0-1，数字越大，波动性越大
+* **11. top_P** ：控制音频的情感相关性，范围为 0.1-0.9，数字越大，相关性越高
+* **12. top_K** ：控制音频的情感相似性，范围为 1-20，数字越小，相似性越高
+
+### 系数控制
+
+* **13. DVAE Coefficient** : 模型系数码
+* **14. Reload** : 重新加载模型系数
+
+### 播放控制
+
+* **15. Auto Play** : 是否在生成音频后自动播放
+* **16. Stream Mode** : 是否启用流式输出
+* **17. Generate** : 点击生成音频文件
+* **18. Output Audio** : 音频生成结果
+* **19. ↓** : 点击下载音频文件
+* **20. ▶️** : 点击播放音频文件
+
+### 示例控制
+
+* **21. Example** : 点击切换示例配置
+
+## 音色控制
+
+经过实际测试，指定音色种子值每次生成 `spk_emb` 和重复使用预生成好的 `spk_emb` 效果有较显著差异，建议优先使用 `.pt` 音色文件或者音色码（字符串表示形式）。
+
+在 [ChatTTS_Speaker](https://huggingface.co/spaces/taa/ChatTTS_Speaker) 项目中对音色种子进行了初步打标和稳定性评估，可以通过示例来快速选择合适的音色。
+
+![audio-code.png](readme/audio-code.png)
+
+### WebUI
+
+在官方 WebUI 中使用时，可直接将音色码复制之后，替换 `9. Speaker Embedding` 中的值，实现音色控制。
+
+### Python
+
+在 Python 脚本中使用时，参考 [issue#07](https://github.com/6drf21e/ChatTTS_Speaker/issues/7) 中的压缩方案实现音色控制。
+
+``` python
+spk = torch.load("asset/seed_1332_restored_emb.pt", map_location=torch.device('cpu')).detach()
+spk_emb_str = compress_and_encode(spk)
+
+params_infer_code = ChatTTS.Chat.InferCodeParams(
+    spk_emb= spk_emb_str,  # add sampled speaker
+    temperature=.0003,  # using custom temperature
+    top_P=0.7,  # top P decode
+    top_K=20,  # top K decode
+)
+```
+
+## 入门教程
+
+### 中文教程
 
 |                                                                    视频                                                                     | 亮点            |
 |:-----------------------------------------------------------------------------------------------------------------------------------------:|---------------|
@@ -56,122 +134,19 @@ https://github.com/libukai/Awesome-ChatTTS/assets/5654585/532bfb80-316a-4244-9b9
 |                      [ZTFS](https://www.bilibili.com/video/BV1nZ421p74z/?vd_source=6773fc664ee1e277b8a2290d66ebb7a3)                      | Mac M1 部署教程   |
 | [王-寳寳](https://www.bilibili.com/video/BV1Ji421U74a/?spm_id_from=333.337.search-card.all.click&vd_source=6773fc664ee1e277b8a2290d66ebb7a3) | Windows 部署教程  |
 
+### 英文教程
 
-## 讨论社区
-
-* [官方项目 Issues](https://github.com/2noise/ChatTTS/issues)
-* 官方讨论 QQ 群：
-  - 808364215 (已满) 
-  - 230696694 (已满) 
-  - 933639842（可加入）
-
-
-## 参数说明
-
-本图示仅用于展示各参数的含义，对应的 WebUI 还在等待 PR 合并中，请关注源仓库 [2noise/ChatTTS](https://github.com/2noise/ChatTTS) 的更新。
-
-![配置项说明](readme/web-ui.png)
-
-### 情感控制
-
-* **speed** : 控制音频速度，范围为 0-9，数字越大，速度越快
-* **temperate** : 控制音频情感波动性，范围为 0-1，数字越大，波动性越大
-* **top_P** ：控制音频的情感相关性，范围为 0.1-0.9，数字越大，相关性越高
-* **top_K** ：控制音频的情感相似性，范围为 1-20，数字越小，相似性越高
-
-### 文本控制
-
-* **Refine text** : 控制是否对文本进行口语化处理，取消勾选则后面三个选项无效
-* **oral** : 控制文本口语化程度，范围为 0-9，数字越大，添加的“就是”、“那么”之类的连接词越多
-* **laugh** : 控制文本是否添加笑声，范围为 0-9，数字越大，笑声越多
-* **break** : 控制文本是否添加停顿，范围为 0-9，数字越大，停顿越多
-
-### 种子控制
-
-* **Audio Seed** : 配置音色种子值，不同种子对应不同音色，不同种子间差异性较大
-* **Text Seed** : 配置情感种子值，不同种子对应不同情感，不同种子间差异性较小
-
-## 音色种子
-
-经过代码审查和实际测试，指定音色种子值每次生成 `spk_emb` 和重复使用预生成好的 `spk_emb` 效果有细微差异，建议有能力优先使用 `.pt` 音色文件。
-
-在 [ttwwwaa/ChatTTS_Speaker](https://modelscope.cn/studios/ttwwwaa/ChatTTS_Speaker/summary) 项目中对音色种子进行了初步打标和稳定性评估，可以快速通过示例来选择合适的音色种子。
-
-![sample.png](readme/sample.png)
-
-此外，也可以尝试使用 [ChatTTS Voice Cloning](http://region-9.autodl.pro:41137/) 自行克隆需要的音色。
-
-![clone.png](readme/clone.png)
-
-## 安装指南
-
-本安装指南适用于需要运行源仓库代码的用户，小白用户建议使用 [快速体验](#快速体验) 中的方法。
-
-### 快速安装
-
-```bash
-pip install git+https://github.com/2noise/ChatTTS
-```
-
-### 手动安装
-
-1. 根据设备类型，下载 [Miniconda](https://docs.anaconda.com/free/miniconda/) 并安装
-2. 在终端中下载项目代码
-``` bash
-git clone https://github.com/2noise/ChatTTS
-```
-3. 进入项目目录
-``` bash
-cd ChatTTS
-```
-4. 创建 conda 环境并激活
-```bash
-conda create -n chattts
-conda activate chattts
-```
-5. 安装基本依赖
-```bash
-pip install -r requirements.txt
-```
-6. 运行 web-ui
-``` bash
-python examples/web/webui.py
-
-# 首次运行会下载模型，如果可以科学上网请耐心等待下载完成
-# 如果无法下载，可以参考 **模型无法下载** 问题中的解决方案修改代码
-# 显示以下信息，则表示运行成功：
-
-Running on local URL:  http://0.0.0.0:8080
-```
-7. 打开浏览器访问 http://localhost:8080
+|                                                                    视频                                                                     | 亮点            |
+|:-----------------------------------------------------------------------------------------------------------------------------------------:|---------------|
+|                     [Sam Witteveen](https://www.youtube.com/watch?v=L4klnZ5Lox8)                      | 英文版介绍         |
 
 ## 常见问题
 
-源仓库代码直接运行可能遇到的问题较多，可以根据以下清单快速解决。
-
-### 依赖版本过低
-
-老版项目中 `requirement.txt` 中列出的依赖版本较老，在部分环境下可能会出现报错，建议更新至最新版依赖文件。
-
-```conf
-numpy<2.0.0
-omegaconf>=2.3.0
-torch>=2.1.0
-tqdm
-vector_quantize_pytorch
-transformers>=4.41.1
-vocos
-IPython
-gradio
-python-dotenv
-pynini==2.1.5
-WeTextProcessing
-nemo_text_processing
-```
+经过近期的迭代，源仓库代码中的问题已经基本解决。如果遇到问题，建议先详细查看 [官方说明文档中文版](https://github.com/2noise/ChatTTS/blob/main/docs/cn/README.md) ，如果还有问题可以继续查看本文档。
 
 ### 模型无法下载
 
-原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，可以从 [modelscope](https://www.modelscope.cn/models/pzc163/chatTTS/summary) 上下载模型和配置，并配置本地路径。
+原版项目运行需要从 HuggingFace 下载对应的模型，如果不能顺畅科学上网，那么就无法完成这一步。作为替代方案，可以从 [modelscope](https://www.modelscope.cn/models/pengzhendong/ChatTTS/files) 上下载模型和配置，并配置本地路径。
 
 > [!Important]
 > 魔塔上的模型库是由志愿者维护的，不保证所有模型都是最新的，如果有需要请自行验证。
@@ -193,15 +168,26 @@ model_dir = snapshot_download('zlj2546/ChatTTS')
 ret = chat.load_models('custom', custom_path=model_dir)
 ```
 
-### 音频无法保存
+### IDE 中无法运行
 
-通过脚本运行时，音频保存官方推荐使用 torchaudio，实测最新版本已经可以正常运行。如果运行有问题，也可以使用 soundfile 库进行音频保存。
+在 IDE 中运行时，由于文件相对路径的问题，导致脚本无法顺利运行。
 
-``` python
-import soundfile
+建议参照官方说明文档 [快速启动](https://github.com/2noise/ChatTTS/blob/main/docs/cn/README.md#%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8) 中的指令直接在终端中运行。
 
-wavs = chat.infer(text, skip_refine_text=True, params_refine_text=params_refine_text,  params_infer_code=params_infer_code)
-soundfile.write("output1.wav", wavs[0][0], 24000)
+> 确保在执行以下命令时，处于项目根目录下。
+
+#### 1. WebUI 可视化界面
+
+```bash
+python examples/web/webui.py
+```
+
+#### 2. 命令行交互
+
+> 生成的音频将保存至 `./output_audio_n.mp3`
+
+```bash
+python examples/cmd/run.py "Your text 1." "Your text 2."
 ```
 
 ### 语气标签被读出
@@ -245,15 +231,11 @@ GPU 至少需要 4G 显存，否则将强制使用 CPU，相关问题可以参�
 conda install -c conda-forge pynini=2.1.5 && pip install WeTextProcessing
 ```
 
-5、`Couldn't find appropriate backend to handle uri output1.wav and format wav.`
+5、`download to Local path D：\pythonlproject\ChatTTS\ChatTTS failed.`
 
-详见 **常见问题 - 音频保存**
+在 IDE 中直接执行脚本，会因为文件路径问题报错，详见 **常见问题 - IDE 中无法运行**
 
-6、`Could not find a version that satisfies the requirement torch~=2.1.0`
-
-详见 **常见问题 - 依赖版本**
-
-7、`ModuleNotFoundError : No module named'Cython'`
+6、`ModuleNotFoundError : No module named'Cython'`
 
 未找到 Python 执行路径，Windows 设备需要按 [教程](https://www.cnblogs.com/ajianbeyourself/p/17654155.html) 配置环境路径
 
